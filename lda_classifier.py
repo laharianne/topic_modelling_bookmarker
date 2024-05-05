@@ -57,9 +57,9 @@ def categorize_website(url):
 
     # Preprocess the text by applying some filters and tokenizing it
     #tokens = preprocess_string(content)
-    model =  gensim.models.LdaModel.load('lda_model_20.model')
+    model =  gensim.models.LdaModel.load('./model/lda_model_20.model')
 
-    dictionary = gensim.corpora.Dictionary.load_from_text("dict_20.txt")
+    dictionary = gensim.corpora.Dictionary.load_from_text("./model/dict_20.txt")
 
     test_corpus = [content]
     test_clean_corpus = [clean(doc).split() for doc in test_corpus]  

@@ -5,9 +5,9 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "hello_extensions.png",
-      "48": "hello_extensions.png",
-      "128": "hello_extensions.png"
+      "16": "./images/hello_extensions.png",
+      "48": "./images/hello_extensions.png",
+      "128": "./images/hello_extensions.png"
     }
   },
   "permissions": ["bookmarks", "tabs", "notifications"],
