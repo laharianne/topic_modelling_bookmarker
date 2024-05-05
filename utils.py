@@ -1,20 +1,24 @@
-import requests # Import the requests library to make HTTP requests
-from bs4 import BeautifulSoup # Import BeautifulSoup for HTML parsing
-from gensim.parsing.preprocessing import preprocess_string # Import preprocess_string function from gensim library
+# Import necessary libraries
+import requests
+from bs4 import BeautifulSoup
+from gensim.parsing.preprocessing import preprocess_string
 
-# Send an HTTP GET request to the specified URL
-# Parse the HTML content using BeautifulSoup
+# Function to fetch and extract text content from a web page
 def extract_text_from_url(url):
+    # Fetch content from URL
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     
-    # Extract text from various HTML elements
-    elements = soup.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "span", "strong", "em", "a"])
-    # Find all HTML elements specified in the list and store them in the 'elements' variable
-    content = " ".join([elem.get_text() for elem in elements])
-    return content # Return the extracted text content
+    # Define the HTML tags to extract
+    tags_to_extract = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "span", "strong", "em", "a"]
+    
+    # Gather text from specified tags
+    extracted_text = " ".join(element.get_text() for element in soup.find_all(tags_to_extract))
+    
+    # Return the consolidated text
+    return extracted_text
 
-# Call the preprocess_string function from the gensim library to preprocess the input string
-# with no specified filters and return the preprocessed string
-def preprocess_string(s):
-    return preprocess_string(s, filters=None)
+# Function to clean and preprocess text
+def preprocess_string(text):
+    # Apply gensim's preprocess_string function without any custom filters
+    return preprocess_string(text, filters=None)
