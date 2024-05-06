@@ -105,14 +105,18 @@ def sentiment_analysis(url):
         return "Negative"
     else:
         return "Positive"
+
 Actual_topics = {"Business & Politics":1, "Entertainment & lifestyle":2, "Technology & Science & Education & Literature":3}
-Test_topics = {"Business & Politics":1, "Entertainment & Lifestyle":2,"Entertainment & lifestyle":2, "Technology & Science":3}
+Test_topics = {"Business & Politics":1, "Entertainment & Lifestyle":2, "Entertainment & lifestyle":2, "Technology & Science":3}
 matched_data = []
+
 def test_match():
+    matched_data_results = pd.DataFrame(columns=["Link","Topic","Model_Topic","Match","Sentiment"])
     count_match = 0
     with open('final_data.csv', mode ='r') as file:
         csvFile = csv.reader(file)
         for lines in csvFile:
+                match = "Not Match"
                 if(lines[0]=="Link"):
                     continue
                 print(lines[0])
@@ -121,11 +125,24 @@ def test_match():
                 print(topic)
                 print(actual_topic)
                 if(Actual_topics[actual_topic]==Test_topics[topic]):
+                    match = "Match"
                     print("Match")
                     count_match += 1
                 else:
                     print("Not Match")
+                
+                #Sentiment Analysis
+                sentiment = sentiment_analysis(lines[0])
+                print(sentiment)
+                matched_data_results = pd.concat([matched_data_results, pd.DataFrame({
+                    "Link": [lines[0]],
+                    "Topic": [topic],
+                    "Model_Topic": [actual_topic],
+                    "Match": [match],
+                    "Sentiment" : [sentiment]
+                })], ignore_index=True)
+
                 print("X----------------X")
     print("total_match:"+str(count_match))
-
+    matched_data_results.to_csv("Test_results.csv", index=False)
 test_match()
