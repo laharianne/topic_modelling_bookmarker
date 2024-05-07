@@ -35,7 +35,7 @@ cd topic-modelling-bookmarker
 python app.py
 
 ## Usage
-After uploading the extension to chrome, users can click the extension icon while browsing a webpage to see topic suggestions and sentiment analysis. Users can also search for stored bookmarks based on topics directly from the extension's popup.
+After uploading the extension to chrome, users can click the extension icon while browsing a webpage to see topic suggestions and sentiment analysis.
 
 ## Developers
 - **Lahari Anne** - [lanne2@illinois.edu](mailto:lanne2@illinois.edu)
