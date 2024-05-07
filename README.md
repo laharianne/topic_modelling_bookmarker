@@ -21,9 +21,11 @@ The Topic Modelling Bookmarker is a Google Chrome extension designed to enhance 
 ### Sentiment Analysis
 - **VADER Sentiment Analyzer**: Employed for sentiment analysis, providing a compound score that helps ascertain the overall sentiment of the content (positive, negative, neutral).
 - **Integration**: This analysis is performed in real-time as the user browses, with results displayed immediately to provide instant feedback on the content's sentiment.
-
+- 
 ### Backend
 - **Flask Application**: Serves as the backend framework to handle requests from the Chrome extension, processing data, and returning results.
+## Flow Diagram
+![flow_diagram](https://github.com/laharianne/topic_modelling_bookmarker/assets/143364981/14c3ea29-d63d-4345-9efc-8737f07c9e0d)
 
 ## Setup and Installation
 1. **Clone the repository**:
