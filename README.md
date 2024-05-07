@@ -32,9 +32,32 @@ The Topic Modelling Bookmarker is a Google Chrome extension designed to enhance 
 git clone https://github.com/yourgithubusername/topic-modelling-bookmarker.git
 2. **Navigate to the directory**:
 cd topic-modelling-bookmarker
-3. **Install dependencies**
+
+3. **Install dependencies** : 
+* pip install flask flask-cors scikit-learn bs4 transformers requests
+* pip install gensim torch
 4. **Run the application**:
 python app.py
+
+Wait until you receive,  
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with watchdog (windowsapi)
+ * Debugger is active!
+ * Debugger PIN: xxx-yyy-zzz
+
+5. **Extension Set Up**
+* Download and extract the zip file or clone the project to your local.
+* /yourpath/topic_modelling_bookmarker/ is our root folder
+
+* Go to chrome://extensions/ and turn on the developer mode in the top right corner of the page.
+* Remove the generated __pycache__ folder from the project after running the "python app.py"
+* Click on "Load unpacked" on the top left and select the /yourpath/topic_modelling_nookmarker/ folder.
+* Open a new tab and you should now be able to see the Topic Modelling Bookmarker extension among your other browser extensions.
 
 ## Usage
 After uploading the extension to chrome, users can click the extension icon while browsing a webpage to see topic suggestions and sentiment analysis.
