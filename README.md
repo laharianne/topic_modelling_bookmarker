@@ -67,4 +67,9 @@ After uploading the extension to chrome, users can click the extension icon whil
 - **Sanjay Raj Aerra** - [saerra2@illinois.edu](mailto:saerra2@illinois.edu)
 - **Sasi Pavan Surapaneni** - [ss257@illinois.edu](mailto:ss257@illinois.edu)
 
+## Resource Links
+- **Video Presentation** - https://drive.google.com/file/d/1ay-p4yosUsFsk5UCWsPLhQ6kXbdPIA-y/view?usp=sharing
+- **Slides Presentation** - https://docs.google.com/presentation/d/1zvj3T7741Ytub2UjWXFcNXhVfNRWmIh8nMOR46wf4yU/edit?usp=sharing
+- **Report Link** - https://github.com/laharianne/topic_modelling_bookmarker/blob/main/CS%20510%20Final%20Project%20Report.pdf
+      
 
